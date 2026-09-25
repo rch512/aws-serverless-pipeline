@@ -39,6 +39,13 @@ Below: End-to-end execution completed in ~522 ms utilizing 100 MB of the allocat
 
 ![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/9cc1834d4d924421cf97fc530be2e5908533c6be/docs/03-cloudwatch-execution.png)
 
+
+### SNS Alert Delivery
+
+Below: The resulting fan-out email notification confirming the precise file processed.
+
+![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/9cc1834d4d924421cf97fc530be2e5908533c6be/docs/04-sns-email-delivery.png)
+
 ## Infrastructure as Code (IaC)
 This project includes a foundational Terraform configuration (`terraform/main.tf`) to automate the provisioning of the AWS resources. 
 
@@ -46,8 +53,3 @@ By defining the environment as code, the pipeline is entirely reproducible and a
 * The `raw-media` input S3 bucket.
 * The `processed-media` output S3 bucket.
 * The Amazon SNS topic and the required email subscription for alerting.
-
-### SNS Alert Delivery
-Below: The resulting fan-out email notification confirming the precise file processed.
-
-![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/9cc1834d4d924421cf97fc530be2e5908533c6be/docs/04-sns-email-delivery.png)
