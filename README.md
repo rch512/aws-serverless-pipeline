@@ -30,11 +30,14 @@ The pipeline was tested in us-east-1 and verified via CloudWatch logs.
 S3 Trigger & Event Routing
 Below: The S3 source trigger successfully invoking the processor, and the decoupled processed file landing in the destination bucket.
 
+![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/f480a7e3067d1a7e4ea653e6471760ec3596786a/docs/02-s3-processed-output.png)
 
 CloudWatch Telemetry
 Below: End-to-end execution completed in ~522 ms utilizing 100 MB of the allocated 128 MB memory footprint.
+
 ![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/9cc1834d4d924421cf97fc530be2e5908533c6be/docs/03-cloudwatch-execution.png)
 
 SNS Alert Delivery
 Below: The resulting fan-out email notification confirming the precise file processed.
+
 ![image alt](https://github.com/rch512/aws-serverless-pipeline/blob/9cc1834d4d924421cf97fc530be2e5908533c6be/docs/04-sns-email-delivery.png)
